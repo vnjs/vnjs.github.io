@@ -17,7 +17,7 @@ title: VNJS JavaScript API
   permitted in the JavaScript code if the constant has been registered using the 'registerConstant'
   mutator. The following VNJS code example demonstrates how to register a constant and then access the
   constant within the JavaScript code;</p>
-{% highlight linenos %}
+{% highlight linenos %}{% raw %}
 // Declare an example VNJS constant.
 const my_rectangle = Rectangle(
     width:         400,
@@ -36,7 +36,7 @@ const my_javascript_function = {%
 %}
 // The 'my_rectangle' constant is registered with the function here,
 my_javascript_function.registerConstant(my_rectangle);
-{% endhighlight %}
+{% endraw %}{% endhighlight %}
 
 <a name='setTargetStyle'><h2>setTargetStyle ( canvas_element, style )</h2></a>
 
