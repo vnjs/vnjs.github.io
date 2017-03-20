@@ -249,7 +249,7 @@ body { box-sizing: border-box; color: #373737; background: #f5f6f6; font-size: 1
 
 pre, code { width: 100%; color: #111; background-color: #e1f4e5; font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace; font-size: 14px; border-radius: 2px; -moz-border-radius: 2px; -webkit-border-radius: 2px; }
 
-pre { width: 100%; padding: 10px 10px 20px 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); overflow: auto; }
+pre { width: 100%; margin-bottom: 15px; padding: 10px 10px 20px 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); overflow: auto; }
 
 footer p {color: #01011f;}
 footer a { color: #01011f; text-decoration: underline; }
