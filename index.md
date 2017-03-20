@@ -1,5 +1,6 @@
 ---
 title: VNJS Documentation
+layout: page
 ---
 
 ## VNJS Documentation
