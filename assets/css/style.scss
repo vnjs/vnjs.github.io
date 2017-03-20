@@ -3,7 +3,14 @@
 
 @import "{{ site.theme }}";
 
+body { box-sizing: border-box; color: #373737; background: #f5f6f6; font-size: 16px; font-family: 'Myriad Pro', Calibri, Helvetica, Arial, sans-serif; line-height: 1.5; -webkit-font-smoothing: antialiased; }
+
+footer p {color: #01011f;}
+footer a { color: #01011f; text-decoration: underline; }
+
 #header_wrap .inner {padding: 10px 5px 10px 5px;}
+#footer_wrap { background: #f5f6f6; }
+
 
 #project_title { margin: 0; color: #fff; font-size: 30px; font-weight: 700; text-shadow: #111 0px 0px 10px; }
 
