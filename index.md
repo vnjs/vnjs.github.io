@@ -1,3 +1,7 @@
+---
+title: VNJS Documentation
+---
+
 ## VNJS Documentation
 
 ### About
