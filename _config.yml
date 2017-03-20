@@ -1,4 +1,5 @@
 theme: jekyll-theme-slate
+markdown: kramdown
 title: VNJS
 description: VNJS Animation and Scripting Engine
 github_username: vnauthor
