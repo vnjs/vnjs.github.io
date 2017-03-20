@@ -6,4 +6,4 @@ title: VNJS Documentation
 
 ### About
 
-VNJS is an engine for creating interactive visual stories for publishing on the Web, using HTML5.
+VNJS is an engine for creating interactive visual stories for publishing on the Web, using HTML5. Testing.
