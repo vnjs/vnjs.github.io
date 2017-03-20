@@ -1,6 +1,6 @@
 theme: jekyll-theme-slate
 title: VNJS
-description: Documentation for the VNJS Engine
+description: VNJS Animation and Scripting Engine
 github_username: vnauthor
 github:
   repository_url: https://github.com/vnjs/vnjs
