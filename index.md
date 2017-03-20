@@ -10,7 +10,7 @@ VNJS is an engine for creating interactive visual stories for publishing on the 
 
 ```javascript
 // Animation for when a text trail is removed from display,
-const converse_trail_exit = {%
+const converse_trail_exit = &#123%
   function (args, context) {
     var bg_element = context.getConstant('converse_background');
     context.setTargetStyle( bg_element, {
