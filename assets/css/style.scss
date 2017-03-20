@@ -247,6 +247,8 @@ Full-Width Styles
 
 body { box-sizing: border-box; color: #373737; background: #f5f6f6; font-size: 16px; font-family: 'Myriad Pro', Calibri, Helvetica, Arial, sans-serif; line-height: 1.5; -webkit-font-smoothing: antialiased; }
 
+pre, code { width: 100%; color: #111; background-color: #daeade; font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace; font-size: 14px; border-radius: 2px; -moz-border-radius: 2px; -webkit-border-radius: 2px; }
+
 footer p {color: #01011f;}
 footer a { color: #01011f; text-decoration: underline; }
 
