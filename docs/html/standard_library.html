@@ -29,8 +29,33 @@ title: VNJS Standard Library
 </ul>
 
 <h4>Examples</h4>
+<p>A rectangle with a 50% transparent fill, a black edge, and rounded corners;</p>
+{% highlight javascript %}
+const my_rectangle = Rectangle(
+    width:         400,
+    height:        150,
+    corner_radius: 75,
+    fill_style:    'hsla(211, 70%, 10%, .5)',
+    stroke_style:  'black',
+    line_width:    1.5,
+  );
+{% endhighlight %}
+<p>A rectangle with a linear gradient fill.</p>
+{% highlight javascript %}
+const my_linear_gradient = LinearGradient(
+    x1: 0, y1: -200,
+    x2: 0, y2: +200,
+  );
+my_linear_gradient.addColorStop(stop:0,  color:'hsla(211, 40%, 10%, 0)');
+my_linear_gradient.addColorStop(stop:1,  color:'hsla(211, 40%,  1%, 1)');
 
-
+const my_rectangle = Rectangle(
+    width:         400,
+    height:        400,
+    corner_radius: 75,
+    fill_style:    my_linear_gradient,
+  );
+{% endhighlight %}
 
 <a name='TextTrail'><h3>TextTrail Object</h3></a>
 
