@@ -2,3 +2,4 @@ theme: jekyll-theme-slate
 title: VNJS
 description: Documentation for the VNJS Engine
 github_username: vnauthor
+github.repository_url: https://github.com/vnjs/vnjs
