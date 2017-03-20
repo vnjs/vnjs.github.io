@@ -245,9 +245,11 @@ Full-Width Styles
 
 .inner { position: relative; max-width: 840px; padding: 20px 10px; margin: 0 auto; }
 
-body { box-sizing: border-box; color: #373737; background: #f5f6f6; font-size: 16px; font-family: 'Myriad Pro', Calibri, Helvetica, Arial, sans-serif; line-height: 1.5; -webkit-font-smoothing: antialiased; }
+body { box-sizing: border-box; color: #373737; background: #f5f6f6; font-size: 16px; font-family: Helvetica, Arial, sans-serif; line-height: 1.5; -webkit-font-smoothing: antialiased; }
 
-pre, code { width: 100%; color: #111; background-color: #daeade; font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace; font-size: 14px; border-radius: 2px; -moz-border-radius: 2px; -webkit-border-radius: 2px; }
+pre, code { width: 100%; color: #111; background-color: #e1f4e5; font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace; font-size: 14px; border-radius: 2px; -moz-border-radius: 2px; -webkit-border-radius: 2px; }
+
+pre { width: 100%; padding: 10px 10px 20px 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); overflow: auto; }
 
 footer p {color: #01011f;}
 footer a { color: #01011f; text-decoration: underline; }
