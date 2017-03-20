@@ -1,36 +1,12 @@
 ---
-layout: default
+layout: st01
 title: VNJS Home Page
 ---
 
-<h2>VNJS Documentation</h2>
-
-<nav>
-  <ul>
-    <li><a href='/index.html'>Home</a></li>
-    <li><a href='/context_api.html'>Context API</a></li>
-  </ul>
-</nav>
+<h2>VNJS - The HTML5 Visual Novel Engine</h2>
 
 <h3>About</h3>
 <p>VNJS is an engine for creating interactive visual stories for publishing on the Web, using HTML5.</p>
 
-{% highlight javascript %}
-function roundedRect(ctx, x, y, width, height, radius) {
-
-  if (radius === void 0) radius = 0;
-
-  ctx.beginPath();
-  ctx.moveTo(x, y + radius);
-  ctx.lineTo(x, y + height - radius);
-  ctx.arcTo(x, y + height, x + radius, y + height, radius);
-  ctx.lineTo(x + width - radius, y + height);
-  ctx.arcTo(x + width, y + height, x + width, y + height-radius, radius);
-  ctx.lineTo(x + width, y + radius);
-  ctx.arcTo(x + width, y, x + width - radius, y, radius);
-  ctx.lineTo(x + radius, y);
-  ctx.arcTo(x, y, x, y + radius, radius);
-  ctx.closePath();
-
-}
-{% endhighlight %}
+<h3>Documentation</h3>
+<p><a href='docs/html/index.html'>VNJS Documentation</a></p>
