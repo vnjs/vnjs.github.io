@@ -3,14 +3,29 @@
 
 @import "{{ site.theme }}";
 
+@media screen and (max-width: 480px) { body { font-size: 14px; }
+  #downloads { display: none; }
+  .inner { min-width: 320px; max-width: 480px; }
+  #project_title { font-size: 22px; }
+  h1 { font-size: 28px; }
+  h2 { font-size: 24px; }
+  h3 { font-size: 21px; }
+  h4 { font-size: 18px; }
+  h5 { font-size: 14px; }
+  h6 { font-size: 12px; }
+  code, pre { min-width: 320px; max-width: 480px; font-size: 11px; } }
+
+.inner { position: relative; max-width: 840px; padding: 20px 10px; margin: 0 auto; }
+
 body { box-sizing: border-box; color: #373737; background: #f5f6f6; font-size: 16px; font-family: 'Myriad Pro', Calibri, Helvetica, Arial, sans-serif; line-height: 1.5; -webkit-font-smoothing: antialiased; }
 
 footer p {color: #01011f;}
 footer a { color: #01011f; text-decoration: underline; }
 
+#main_content { background: #ffffff; padding: 20px 40px 20px 40px; }
+
 #header_wrap .inner {padding: 10px 5px 10px 5px;}
 #footer_wrap { background: #f5f6f6; }
-
 
 #project_title { margin: 0; color: #fff; font-size: 30px; font-weight: 700; text-shadow: #111 0px 0px 10px; }
 
