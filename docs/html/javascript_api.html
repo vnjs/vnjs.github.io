@@ -4,3 +4,40 @@ title: VNJS JavaScript API
 ---
 
 <h2>VNJS JavaScript API</h2>
+<h3>Context API</h3>
+<ul>
+  <li><a href='#getConstant'>getConstant ( constant_name )</a></li>
+  <li><a href='#setTargetStyle'>setTargetStyle ( canvas_element, style )</a></li>
+  <li><a href='#animate'>animate ( canvas_element, anim_args )</a></li>
+</ul>
+
+<a name='getConstant'><h2>getConstant ( constant_name )</h2></a>
+<p>Returns the object of the constant with the given name. This method allows JavaScript code to access
+  constants defined by the VNJS language. When a constant is accessed using this method, access is only
+  permitted in the JavaScript code if the constant has been registered using the 'registerConstant'
+  mutator. The following VNJS code example demonstrates how to register a constant and then access the
+  constant within the JavaScript code;</p>
+{% highlight linenos %}
+// Declare an example VNJS constant.
+const my_rectangle = Rectangle(
+    width:         400,
+    height:        150,
+    stroke_style:  'black',
+    line_width:    1,
+  );
+
+// A JavaScript function that can access the above constant.
+const my_javascript_function = {%
+  function(args, context) {
+    // Access the 'my_rectangle' constant in JavaScript code,
+    var my_rectangle = context.getConstant( 'my_rectangle' );
+    // ... Do something with the constant here ...
+  }
+%}
+// The 'my_rectangle' constant is registered with the function here,
+my_javascript_function.registerConstant(my_rectangle);
+{% endhighlight %}
+
+<a name='setTargetStyle'><h2>setTargetStyle ( canvas_element, style )</h2></a>
+
+<a name='animate'><h2>animate ( canvas_element, anim_args )</h2></a>
