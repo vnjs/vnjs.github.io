@@ -252,11 +252,13 @@ pre, code { width: 100%; color: #111; background-color: #e1f4e5; font-family: Mo
 pre { width: 100%; margin-bottom: 15px; padding: 10px 10px 10px 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); overflow: auto; }
 
 footer p {color: #01011f;}
+
 footer a { color: #01011f; text-decoration: underline; }
 
 #main_content { background: #ffffff; padding: 20px 40px 20px 40px; }
 
-#header_wrap .inner {padding: 10px 5px 10px 5px;}
+#header_wrap .inner { padding: 35px 5px 10px 5px; }
+
 #footer_wrap { background: #f5f6f6; }
 
 #project_title { white-space: nowrap; margin: 0; padding: 0 0 0 5px; color: #fff; font-size: 30px; font-weight: 700; text-shadow: #111 0px 0px 10px; }
@@ -270,7 +272,8 @@ Small Device Styles
 *******************************************************************************/
 @media screen and (max-width: 480px) { body { font-size: 14px; }
   #downloads { display: none; }
-  .inner { min-width: 320px; max-width: 480px; }
+  .inner { min-width: 300px; max-width: 480px; }
+  #main_content { padding: 20px 20px 20px 20px; }
   #project_title { font-size: 24px; }
   h1 { font-size: 28px; }
   h2 { font-size: 24px; }
