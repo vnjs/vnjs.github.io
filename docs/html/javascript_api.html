@@ -38,8 +38,8 @@ const my_javascript_function = {%
 my_javascript_function.registerConstant(my_rectangle);
 {% endraw %}{% endhighlight %}
 
-If the <span class='prop'>registerConstant</span> call is not made then the JavaScript code will denying access to the
-constant and throw an error.
+It is important that the <span class='prop'>registerConstant</span> call is made otherwise the JavaScript code will
+denying access to the constant and throw an error.
 
 <a name='context.setTargetStyle'><h2>context.setTargetStyle ( canvas_element, style )</h2></a>
 <p>Sets the target style that the <span class='prop'>context.animate</span> method will
@@ -51,7 +51,8 @@ constant and throw an error.
 
 <a name='context.animate'><h2>context.animate ( canvas_element, anim_args )</h2></a>
 <p>Starts an animation between the current style of <span class='prop'>canvas_element</span>, and the
-  target style. <span class='prop'>anim_args</span> is an object that must define the following fields;
+  target style defined in a previous call to <span class='prop'>context.setTargetStyle</span>. The <span class='prop'>anim_args</span>
+  argument is an object that must define the following fields;
 </p>
 <ul>
 <li><span class='prop'>time</span>: The number of seconds the animation should take.</li>
