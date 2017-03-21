@@ -52,7 +52,7 @@ denying access to the constant and throw an error.
   horizontally would define the target location of the <span class='prop'>x</span> property.
 </p>
 <h4>Example</h4>
-<p>The code below demonstrates animating a rectangle to move from 200 to 800 along the x coordinates;
+<p>The code below demonstrates animating a rectangle to move from 200 to 800 along the x coordinates over a 5 second period;
 </p>
 {% highlight linenos %}{% raw %}
 // Declare an example VNJS constant.
@@ -72,6 +72,7 @@ const my_javascript_function = {%
     // Access the 'my_rectangle' constant in JavaScript code,
     var my_rectangle = context.getConstant( 'my_rectangle' );
 
+    // Set up and start the animation,
     context.setTargetStyle( my_rectangle, {
       x: 800
     });
@@ -94,7 +95,7 @@ my_javascript_function.registerConstant(my_rectangle);
   'ease-out') or a JavaScript function the defines the easing calculation.</li>
 </ul>
 <h4>Example</h4>
-<p>The code below demonstrates animating a rectangle to move from 200 to 800 along the x coordinates;
+<p>The code below demonstrates animating a rectangle to move from 200 to 800 along the x coordinates over a 5 second period;
 </p>
 {% highlight linenos %}{% raw %}
 // Declare an example VNJS constant.
@@ -114,6 +115,7 @@ const my_javascript_function = {%
     // Access the 'my_rectangle' constant in JavaScript code,
     var my_rectangle = context.getConstant( 'my_rectangle' );
 
+    // Set up and start the animation,
     context.setTargetStyle( my_rectangle, {
       x: 800
     });
