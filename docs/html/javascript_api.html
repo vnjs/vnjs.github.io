@@ -29,9 +29,12 @@ const my_rectangle = Rectangle(
 // A JavaScript function that can access the above constant.
 const my_javascript_function = {%
   function(args, context) {
+
     // Access the 'my_rectangle' constant in JavaScript code,
     var my_rectangle = context.getConstant( 'my_rectangle' );
+
     // ... Do something with the constant here ...
+
   }
 %}
 // Important: The 'my_rectangle' constant is registered here,
@@ -43,11 +46,42 @@ denying access to the constant and throw an error.
 
 <a name='context.setTargetStyle'><h2>context.setTargetStyle ( canvas_element, style )</h2></a>
 <p>Sets the target style that the <span class='prop'>context.animate</span> method will
-  use to produce an animation interpolation between the current style of <span class='prop'>canvas_element</span>, and
+  use to produce an animation interpolation between the current style of <span class='prop'>canvas_element</span> and
   the target style. The <span class='prop'>style</span> argument is an object that specifies the stylable property fields
   of <span class='prop'>canvas_element</span> that the animation targets. For example, an animation that moves an element
   horizontally would define the target location of the <span class='prop'>x</span> property.
 </p>
+<h4>Example</h4>
+<p>The code below demonstrates animating a rectangle to move from 200 to 800 along the x coordinates;
+</p>
+{% highlight linenos %}{% raw %}
+// Declare an example VNJS constant.
+const my_rectangle = Rectangle(
+    width:         400,
+    height:        150,
+    stroke_style:  'black',
+    line_width:    1,
+    x:             200,
+    y:             '50%',
+  );
+
+// A JavaScript function
+const my_javascript_function = {%
+  function(args, context) {
+
+    // Access the 'my_rectangle' constant in JavaScript code,
+    var my_rectangle = context.getConstant( 'my_rectangle' );
+
+    context.setTargetStyle( my_rectangle, {
+      x: 800
+    });
+    context.animate( my_rectangle, { time:5, easing:'ease-in' });
+
+  }
+%}
+// Important: The 'my_rectangle' constant is registered here,
+my_javascript_function.registerConstant(my_rectangle);
+{% endraw %}{% endhighlight %}
 
 <a name='context.animate'><h2>context.animate ( canvas_element, anim_args )</h2></a>
 <p>Starts an animation between the current style of <span class='prop'>canvas_element</span>, and the
@@ -59,4 +93,34 @@ denying access to the constant and throw an error.
 <li><span class='prop'>easing</span>: (optional) Either a string of a pre-set easing function ('no-ease', 'ease-in',
   'ease-out') or a JavaScript function the defines the easing calculation.</li>
 </ul>
+<h4>Example</h4>
+<p>The code below demonstrates animating a rectangle to move from 200 to 800 along the x coordinates;
+</p>
+{% highlight linenos %}{% raw %}
+// Declare an example VNJS constant.
+const my_rectangle = Rectangle(
+    width:         400,
+    height:        150,
+    stroke_style:  'black',
+    line_width:    1,
+    x:             200,
+    y:             '50%',
+  );
 
+// A JavaScript function
+const my_javascript_function = {%
+  function(args, context) {
+
+    // Access the 'my_rectangle' constant in JavaScript code,
+    var my_rectangle = context.getConstant( 'my_rectangle' );
+
+    context.setTargetStyle( my_rectangle, {
+      x: 800
+    });
+    context.animate( my_rectangle, { time:5, easing:'ease-in' });
+
+  }
+%}
+// Important: The 'my_rectangle' constant is registered here,
+my_javascript_function.registerConstant(my_rectangle);
+{% endraw %}{% endhighlight %}
