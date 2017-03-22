@@ -58,10 +58,62 @@ const my_rectangle = Rectangle(
 {% endhighlight %}
 
 <a name='TextTrail'><h2>TextTrail Object</h2></a>
+<p>A canvas element that draws and animates a Text Trail on the screen. A Text Trail is an area in which a string of text is
+  measured and formatted to fit within the area. The text may contain basic HTML markup to change font weight, color and font
+  style. This canvas element supports an animation sequence that renders the text word by word.</p>
+<p>Constructor Properties:</p>
+<ul>
+<li><span class='prop'>font_family</span>: Default font family of the text in this text trail. For fallback
+  fonts then separate each font name with a comma. For example; 'Helvetica, Arial, sans-serif'</li>
+<li><span class='prop'>font_size</span>: Default font size as a string. For example; '25px'</li>
+<li><span class='prop'>font_color</span>: Default font color as a color definition string. For example; '#4080af'</li>
+<li><span class='prop'>width</span>: The total width of the text trail in pixels.</li>
+<li><span class='prop'>height</span>: The total height of the text trail in pixels.</li>
+<li><span class='prop'>trail_width</span>: The width of the area wherein the text is drawn. This is different than
+  <span class='prop'>width</span> and <span class='prop'>height</span> because a margin is necessary when large
+  text glyphs are drawn.</li>
+<li><span class='prop'>trail_height</span>: The height of the area wherein the text is drawn.</li>
+<li><span class='prop'>dx</span>: Offset to draw text.</li>
+<li><span class='prop'>dy</span>: Offset to draw text.</li>
+<li><span class='prop'>draw_text_shadow</span>: (boolean) When true draws a shadow around the text.</li>
+<li><span class='prop'>ms_per_word</span>: The standard time it should take to draw a word, in milliseconds.</li>
+<li><span class='prop'>pixels_between_words</span>: The number of pixels that separate words.</li>
+<li><span class='prop'>text_halign</span>: (string) The horizontal alignment of text. Either, 'left', 'center' or 'right'.</li>
+<li><span class='prop'>line_height</span>: The number of pixels that separate lines.</li>
+<li><span class='prop'>first_line_indent</span>: The x offset, in pixels, for the first line.</li>
+</ul>
 
+<h4>Examples</h4>
 
 <a name='LinearGradient'><h2>LinearGradient Object</h2></a>
+<p>A styling object for a linear gradient.</p>
+<p>Constructor Properties:</p>
+<ul>
+<li><span class='prop'>x1</span>, <span class='prop'>y1</span>: The relative coordinates of the start of the gradient.</li>
+<li><span class='prop'>x2</span>, <span class='prop'>y2</span>: The relative coordinates of the end of the gradient.</li>
+</ul>
+<p>Mutator Functions:</p>
+<ul>
+<li><span class='prop'>addColorStop ( stop, color )</span>: Adds a color stop for describing how the gradient color interpolates over
+  the range. (eg. lg.addColorStop( stop: 0, color:'hsla(211, 40%, 10%, .2' ))</li>
+</ul>
 
+<h4>Examples</h4>
 
 <a name='RadialGradient'><h2>RadialGradient Object</h2></a>
+<p>A styling object for a radial gradient.</p>
+<p>Constructor Properties:</p>
+<ul>
+<li><span class='prop'>x1</span>, <span class='prop'>y1</span>: The relative coordinates of the start of the gradient.</li>
+<li><span class='prop'>r1</span>: The radius of the start of the gradient.</li>
+<li><span class='prop'>x2</span>, <span class='prop'>y2</span>: The relative coordinates of the end of the gradient.</li>
+<li><span class='prop'>r2</span>: The radius of the end of the gradient.</li>
+</ul>
+<p>Mutator Functions:</p>
+<ul>
+<li><span class='prop'>addColorStop ( stop, color )</span>: Adds a color stop for describing how the gradient color interpolates over
+  the range. (eg. lg.addColorStop( stop: 0, color:'hsla(211, 40%, 10%, .2' ))</li>
+</ul>
+
+<h4>Examples</h4>
 
